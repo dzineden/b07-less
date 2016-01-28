@@ -1,0 +1,50 @@
+@basecolor:#FF0000;
+@header-bdr-color:darken(@basecolor,25%);
+@bdrcolor:lighten(@basecolor,10%);
+@bgcolor:lighten(@basecolor, 40%);
+@font-family:Verdana, Geneva, Tahoma, sans-serif;
+@heading-font-family:Georgia, Times, "Times New Roman", serif;
+@base-font-size:16px;
+
+.rotate{
+	-webkit-transform: rotate(5deg);
+		 -moz-transform: rotate(5deg);
+			-ms-transform: rotate(5deg);
+			 -o-transform: rotate(5deg);
+					transform: rotate(5deg);
+}
+.bdr{
+	border:solid 1px @bdrcolor;
+}
+.square(@boxwidth:50px){
+	width:@boxwidth;
+	height: @boxwidth;
+}
+body{
+	background-color:@bgcolor ;
+	font: @base-font-size/1.2 @font-family;
+}
+header{
+	border-bottom: solid 6px @header-bdr-color;
+}
+
+.dabba{
+	.square();
+	.bdr;
+	.rotate;
+}
+.dabba200{
+	.square(200px);
+	.bdr;
+	.rotate;
+}
+.dabba300{
+	.square(300px);
+	.bdr;
+	.rotate;
+}
+
+.img{
+	.bdr;
+	.rotate;
+}
